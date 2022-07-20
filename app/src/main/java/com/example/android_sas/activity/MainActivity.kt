@@ -24,16 +24,8 @@ class MainActivity : AppCompatActivity() {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host_fragment) as NavHostFragment
         navController = navHostFragment.navController
 
-//        val navGraph = navController.navInflater.inflate(R.navigation.nav_graph)
-//        when{
-//            AuthManager.isAuthorized -> {
-//                navGraph.setStartDestination(R.id.mainFlowFragment)
-//            }
-//            !AuthManager.isAuthorized -> {
-//                navGraph.setStartDestination(R.id.authFlowFragment)
-//            }
-//        }
-//
-//        navController.graph = navGraph
+        val navGraph = navController.navInflater.inflate(R.navigation.nav_graph)
+
+        navController.graph = navGraph
     }
 }
